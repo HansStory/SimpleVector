@@ -1,4 +1,5 @@
-#pragma once
+﻿#pragma once
+#include <algorithm>
 
 template<typename T>
 class SimpleVector
@@ -18,7 +19,11 @@ public:
 
 	void sortData();
 
+	T& operator[](const int& rhs);
+
 private:
+	void reallocate(int newCapacity);
+
 	T* data = nullptr;
 	int currentSize = 0;
 	int currentCapacity = 10;
@@ -31,13 +36,20 @@ SimpleVector<T>::SimpleVector() {
 
 template<typename T>
 SimpleVector<T>::SimpleVector(int size) {
-	data = new T[size];
 	currentCapacity = size;
+	data = new T[size];
 }
 
 template<typename T>
 SimpleVector<T>::SimpleVector(const SimpleVector& other) {
+	currentSize = other.currentSize;
+	currentCapacity = other.currentCapacity;
 
+	data = new T[currentCapacity];
+	for (int i = 0; i < currentSize; i++)
+	{
+		data[i] = other.data[i];
+	}
 }
 
 template<typename T>
@@ -47,33 +59,34 @@ SimpleVector<T>::~SimpleVector() {
 
 template<typename T>
 void SimpleVector<T>::push_back(const T& value) {
-	if (currentSize < currentCapacity)
+	// 배열 공간 부족할 경우 배열 확장
+	if (currentSize >= currentCapacity)
 	{
-		data[currentSize] = value;
-		currentSize++;
+		std::cout << "배열 공간이 부족합니다! 확장을 시도하겠습니다!\n";
+		// 5 만큼 기존배열 크기를 확장
+		this->reallocate(currentCapacity + 5);
 	}
-	else
-	{
-		return;
-	}
+
+	data[currentSize] = value;
+	currentSize++;
+
 }
 
 template<typename T>
 void SimpleVector<T>::pop_back() {
 	if (currentSize > 0)
 	{
-		//data[currentSize] = nullptr;
 		currentSize--;
-	}
-	else
-	{
-		return;
 	}
 }
 
 template<typename T>
 void SimpleVector<T>::resize(int size) {
-
+	if (size > currentCapacity)
+	{
+		reallocate(size);
+	}
+	//currentSize = size;
 }
 
 template<typename T>
@@ -88,5 +101,23 @@ int SimpleVector<T>::capacity() const {
 
 template<typename T>
 void SimpleVector<T>::sortData() {
+	std::sort(data, data + currentSize);
+}
 
+template<typename T>
+T& SimpleVector<T>::operator[](const int& rhs) {
+	return SimpleVector::data[rhs];
+}
+
+template<typename T>
+void SimpleVector<T>::reallocate(int newCapacity)
+{		
+	T* newData = new T[newCapacity];
+	for (int i = 0; i < currentSize; ++i) {
+		newData[i] = data[i];
+	}
+
+	delete[] data;
+	data = newData;
+	currentCapacity = newCapacity;
 }

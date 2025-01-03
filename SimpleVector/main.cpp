@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "SimpleVector.h";
 
 using namespace std;
@@ -8,23 +8,43 @@ int main()
 	SimpleVector<int> sv;
 	SimpleVector<int> simpleVector(15);
 
-	cout << "±âº» »ý¼ºÀÚ !!\n" << "ÇöÀç ¿ø¼Ò °³¼ö:" << sv.size();
-	cout << " ¹è¿­ Å©±â:" << sv.capacity() << endl;
+	cout << "ê¸°ë³¸ ìƒì„±ìž !!\n" << "í˜„ìž¬ ì›ì†Œ ê°œìˆ˜:" << sv.size();
+	cout << " ë°°ì—´ í¬ê¸°:" << sv.capacity() << endl;
 
-	cout << "int ÀÎÀÚ°ªÀ» ¹Þ´Â ´ÙÁß Á¤ÀÇ »ý¼ºÀÚ !!\n" << "ÇöÀç ¿ø¼Ò °³¼ö:" << simpleVector.size();
-	cout << " ¹è¿­ Å©±â:" << simpleVector.capacity() << endl;
+	cout << "int ì¸ìžê°’ì„ ë°›ëŠ” ë‹¤ì¤‘ ì •ì˜ ìƒì„±ìž !!\n" << "í˜„ìž¬ ì›ì†Œ ê°œìˆ˜:" << simpleVector.size();
+	cout << " ë°°ì—´ í¬ê¸°:" << simpleVector.capacity() << endl;
 
-	cout << "\n¹è¿­¿¡ 23, 1 ¿ø¼Ò Ãß°¡!" << endl;
-	sv.push_back(23);
-	sv.push_back(1);
+	cout << "\në°°ì—´ì— 23, 1 ì›ì†Œ ì¶”ê°€!" << endl;
+	sv.push_back(4);
+	sv.push_back(7);
 
-	cout << "¿ø¼Ò °³¼ö/¹è¿­Å©±â:" << sv.size() << "/" << sv.capacity() << endl;
+	cout << "ê¸°ë³¸ ìƒì„±ìž ì›ì†Œ ê°œìˆ˜/ë°°ì—´í¬ê¸°:" << sv.size() << "/" << sv.capacity() << endl;
 
-	cout << "\n¹è¿­¿¡ ¿ø¼Ò 10°³ Ãß°¡!" << endl;
+	SimpleVector<int> copyVector(sv);
+	cout << "\në³µì‚¬ ìƒì„±ìž !!\n" << "í˜„ìž¬ ì›ì†Œ ê°œìˆ˜:" << copyVector.size();
+	cout << " ë°°ì—´ í¬ê¸°:" << copyVector.capacity() << endl;
+	cout << "ë³µì‚¬ ìƒì„±ìž ì›ì†Œ ê°œìˆ˜/ë°°ì—´í¬ê¸°:" << copyVector.size() << "/" << copyVector.capacity() << endl;
+
+	copyVector.resize(22);
+	cout << "\në³µì‚¬ ìƒì„±ìž resize() 22ê°œë¡œ!\n" << "í˜„ìž¬ ì›ì†Œ ê°œìˆ˜:" << copyVector.size();
+	cout << " ë°°ì—´ í¬ê¸°:" << copyVector.capacity() << endl;
+	cout << "ë³µì‚¬ ìƒì„±ìž ì›ì†Œ ê°œìˆ˜/ë°°ì—´í¬ê¸°:" << copyVector.size() << "/" << copyVector.capacity() << endl;
+
+	cout << "\nê¸°ë³¸ìƒì„±ìž ë°°ì—´ì— ì›ì†Œ 10ê°œ ì¶”ê°€!" << endl;
 	for (int i = 0; i < 10; i++)
 	{
 		sv.push_back(i);
 	}
 
-	cout << "¿ø¼Ò °³¼ö/¹è¿­Å©±â:" << sv.size() << "/" << sv.capacity() << endl;
+	cout << "ì›ì†Œ ê°œìˆ˜/ë°°ì—´í¬ê¸°:" << sv.size() << "/" << sv.capacity() << endl;
+
+	SimpleVector<int> sortedVector(sv);
+	sortedVector.sortData();
+	cout << "\në°°ì—´ ì •ë ¬ì„ ì‹œìž‘í•©ë‹ˆë‹¤!" << endl;
+	cout << "[ê¸°ì¡´ë°ì´í„° ì˜ì—­]       [ì •ë ¬ë°ì´í„° ì˜ì—­]" << endl;
+	for (int i = 0; i < sv.size(); i++)
+	{
+		cout << "        " << sv[i] << "                      " << sortedVector[i] << "  " << endl;
+	}
+
 }
