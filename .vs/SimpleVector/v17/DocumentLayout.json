@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\git\\C\u002B\u002B\\SimpleVector\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9275289-1BEE-46F4-A898-B485A4409641}|SimpleVector\\SimpleVector.vcxproj|C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\SimpleVector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B9275289-1BEE-46F4-A898-B485A4409641}|SimpleVector\\SimpleVector.vcxproj|solutionrelative:SimpleVector\\SimpleVector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B9275289-1BEE-46F4-A898-B485A4409641}|SimpleVector\\SimpleVector.vcxproj|C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B9275289-1BEE-46F4-A898-B485A4409641}|SimpleVector\\SimpleVector.vcxproj|solutionrelative:SimpleVector\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9275289-1BEE-46F4-A898-B485A4409641}|SimpleVector\\SimpleVector.vcxproj|C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\SimpleVector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9275289-1BEE-46F4-A898-B485A4409641}|SimpleVector\\SimpleVector.vcxproj|solutionrelative:SimpleVector\\SimpleVector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SimpleVector.h",
               "DocumentMoniker": "C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\SimpleVector.h",
               "RelativeDocumentMoniker": "SimpleVector\\SimpleVector.h",
               "ToolTip": "C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\SimpleVector.h",
               "RelativeToolTip": "SimpleVector\\SimpleVector.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-02T05:25:42.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\main.cpp",
               "RelativeDocumentMoniker": "SimpleVector\\main.cpp",
               "ToolTip": "C:\\git\\C\u002B\u002B\\SimpleVector\\SimpleVector\\main.cpp",
               "RelativeToolTip": "SimpleVector\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-02T05:25:01.758Z",
               "EditorCaption": ""
